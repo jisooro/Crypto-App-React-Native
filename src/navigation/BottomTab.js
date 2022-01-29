@@ -1,20 +1,25 @@
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import React from 'react';
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import CryptoScreen from '../screens/CryptoScreen';
 
 const Tab = createBottomTabNavigator();
 
-const HomeScreen = () => {
-    return (
-        <>
-        
-        </>
-    )
-}
+export const BottomTab = () => {
 
-export default function BottomTab() {
     return (
-        <Tab.Navigator>
-            <Tab.Screen name="Home" component={HomeScreen} />
+        <Tab.Navigator
+            screenOptions = {{
+                headerShown: false,
+                tabBarStyle: {
+                    backgroundColor: '#00162A',
+                },
+                tabBarLabelStyle: {
+                    color: 'white',
+                }
+            }}
+        >
+            <Tab.Screen name = 'CryptoScreen' component = { CryptoScreen } />
         </Tab.Navigator>
     );
+
 }
