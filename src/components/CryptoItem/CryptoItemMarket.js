@@ -2,10 +2,7 @@ import { View, Text, StyleSheet } from 'react-native';
 import React from 'react';
 import { globalStyles } from '../../theme/appTheme';
 
-const CryptoItemMarket = () => {
-
-    let market = 7172628381;
-    let volume = 12838128;
+const CryptoItemMarket = ({ volume_24h, market_cap }) => {
 
     return (
         <View style = { styles.container }>
@@ -16,7 +13,7 @@ const CryptoItemMarket = () => {
                         styles.percentage
                     ]}
                 >
-                    ${ market }
+                    ${ market_cap }
                 </Text>
                 <Text style = { globalStyles.subtitle }>market cap</Text>
             </View>
@@ -27,7 +24,7 @@ const CryptoItemMarket = () => {
                         styles.percentage
                     ]}
                 >
-                    ${ volume }
+                    ${ volume_24h }
                 </Text>
                 <Text style = { globalStyles.subtitle }>volume 24hr</Text>
             </View>
@@ -47,8 +44,8 @@ const styles = StyleSheet.create({
     },
 
     percentage: {
-        fontSize: 18,
-        fontWeight: 'bold',
+        fontSize: 13,
+        // fontWeight: 'bold',
     },
 
 })

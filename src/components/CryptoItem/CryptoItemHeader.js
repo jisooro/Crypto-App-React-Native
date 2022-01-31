@@ -2,17 +2,21 @@ import { View, Text, StyleSheet, Image } from 'react-native';
 import React from 'react';
 import { globalStyles } from '../../theme/appTheme';
 
-const CryptoItemHeader = ({ imageUri, name }) => {
+const CryptoItemHeader = ({ imageUri, name, price, symbol }) => {
 
     return (
         <View style = { styles.container }>
-            <Image
-                source = {{ uri: imageUri }}
-                style = { styles.logo }
-            />
-            <Text style = { globalStyles.whiteText }>{ name }</Text>
+            {  (imageUri !== '') && (
+
+                <Image
+                    source = {{ uri: imageUri }}
+                    style = { styles.logo }
+                />
+
+            )}
+            <Text style = { globalStyles.whiteText }>{ symbol } | { name }</Text>
             <View style = { styles.priceContainer }>
-                <Text style = {[ globalStyles.greenText, styles.price ]}>$36,000.00</Text>
+                <Text style = {[ globalStyles.greenText, styles.price ]}>${ price }</Text>
                 <Text style = {[ globalStyles.subtitle, styles.currentPriceText ]}>current price</Text>
             </View>
         </View>

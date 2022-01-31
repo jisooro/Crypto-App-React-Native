@@ -2,32 +2,29 @@ import { View, Text, StyleSheet } from 'react-native';
 import React from 'react';
 import { globalStyles } from '../../theme/appTheme';
 
-const CryptoItemPricing = () => {
-
-    let volume_24hr = -1.5000;
-    let volume_7d = 10.5;
+const CryptoItemPricing = ({ percent_change_24h, percent_change_7d }) => {
 
     return (
         <View style = { styles.container }>
             <View style = { styles.column }>
                 <Text
                     style = {[ 
-                        (volume_24hr >= 0) ? globalStyles.greenText : globalStyles.redText,
+                        (percent_change_24h >= 0) ? globalStyles.greenText : globalStyles.redText,
                         styles.percentage
                     ]}
                 >
-                    { volume_24hr }%
+                    { percent_change_24h }%
                 </Text>
                 <Text style = { globalStyles.subtitle }>24hr change</Text>
             </View>
             <View style = { styles.column }>
                 <Text
                     style = {[ 
-                        (volume_7d >= 0) ? globalStyles.greenText : globalStyles.redText,
+                        (percent_change_7d  >= 0) ? globalStyles.greenText : globalStyles.redText,
                         styles.percentage
                     ]}
                 >
-                    { volume_7d }%
+                    { percent_change_7d }%
                 </Text>
                 <Text style = { globalStyles.subtitle }>7d change</Text>
             </View>

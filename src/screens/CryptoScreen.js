@@ -1,15 +1,29 @@
-import { View, Text, StyleSheet, SafeAreaView } from 'react-native';
+import { View, Text, StyleSheet, SafeAreaView, FlatList } from 'react-native';
 import React from 'react';
 import CryptoItem from '../components/CryptoItem/CryptoItem';
+import { useCrypto } from '../hooks/useCrypto';
 
 const CryptoScreen = () => {
+
+    const { crypto, loading } = useCrypto();
+
     return (
         <SafeAreaView style = { styles.container }>
             <View style = {{ padding: 15 }}>
 
                 <Text style = { styles.title }>CRYPTO CURRENCIES</Text>
 
-                <CryptoItem />
+                {
+                    (loading) && <Text>Cargando</Text>
+                }
+                {
+                    (!loading) && 
+                        <FlatList
+                            data = { crypto }
+                            keyExtractor = {(item) => item.id}
+                            renderItem = {({item, index}) => <CryptoItem crypto = { item } />}
+                        />
+                }
 
             </View>
         </SafeAreaView>
