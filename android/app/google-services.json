@@ -1,0 +1,90 @@
+{
+  "project_info": {
+    "project_number": "791030472305",
+    "project_id": "cryptoestancias",
+    "storage_bucket": "cryptoestancias.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:791030472305:android:a6360c7ae13a38128b45d0",
+        "android_client_info": {
+          "package_name": "com.cryptoestancias"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "791030472305-1th6cn4tl9fhq99mojm93r56283m0diq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cryptoestancias",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "791030472305-h47ie91eh15gd6daja5s0629bg2vejsq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbUVeZXbQ5VPDs7eZ0lrWeVptxXYoqxns"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "791030472305-h47ie91eh15gd6daja5s0629bg2vejsq.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "791030472305-3mhh29jc4qk0h6n63ardao8rulmgn69n.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.avluet.estanciascrypto"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:791030472305:android:50369c42ad8cfccc8b45d0",
+        "android_client_info": {
+          "package_name": "com.livecryptoapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "791030472305-h47ie91eh15gd6daja5s0629bg2vejsq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbUVeZXbQ5VPDs7eZ0lrWeVptxXYoqxns"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "791030472305-h47ie91eh15gd6daja5s0629bg2vejsq.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "791030472305-3mhh29jc4qk0h6n63ardao8rulmgn69n.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.avluet.estanciascrypto"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

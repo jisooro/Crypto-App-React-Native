@@ -1,12 +1,14 @@
-import { View, Text } from 'react-native';
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { BottomTab } from './src/navigation/BottomTab';
+import BottomTab from './src/navigation/BottomTab';
+import { AuthProvider } from './src/hooks/useAuth';
 
 const App = () => {
 	return (
 		<NavigationContainer>
-			<BottomTab />
+			<AuthProvider>
+				<BottomTab />
+			</AuthProvider>
 		</NavigationContainer>
 	);
 };

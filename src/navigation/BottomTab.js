@@ -1,25 +1,48 @@
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import React from 'react';
-import CryptoScreen from '../screens/CryptoScreen';
+import React from "react";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import Icon from 'react-native-vector-icons/Ionicons';
+import CryptoScreen from "../screens/CryptoScreen";
+import FavoriteScreen from '../screens/FavoriteScreen';
 
 const Tab = createBottomTabNavigator();
 
-export const BottomTab = () => {
-
+const BottomTab = () => {
     return (
         <Tab.Navigator
             screenOptions = {{
                 headerShown: false,
                 tabBarStyle: {
                     backgroundColor: '#00162A',
+                
                 },
-                tabBarLabelStyle: {
+                tabBarLabelStyle: {
                     color: 'white',
-                }
+                },
             }}
         >
-            <Tab.Screen name = 'CryptoScreen' component = { CryptoScreen } />
+            <Tab.Screen 
+                name = "Crypto" 
+                component = { CryptoScreen }
+                options = {{
+                    tabBarIcon: ({ focused }) => (
+                        <Icon name = "card-outline" color = { focused ? '#FFFFFF' : '#C8C8C8' }  size = { 20 }/>
+                    ),
+                }}
+                
+            />
+
+            <Tab.Screen
+                name = "Favorites"
+                component = { FavoriteScreen }
+                options = {{
+                    tabBarIcon: ({ focused }) => (
+                        <Icon name = "star" color = { focused ? '#FFFFFF': '#C8C8C8' } size = { 20 } />
+                    ),
+                }}
+            />
+        
         </Tab.Navigator>
     );
-
 }
+
+export default BottomTab;
