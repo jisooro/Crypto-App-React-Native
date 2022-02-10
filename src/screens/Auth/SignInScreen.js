@@ -30,6 +30,8 @@ const SignInScreen = () => {
                     setErrorMessage('There is no user with the email address introduced.')
                 } else if (error.code === 'auth/wrond-password') {
                     setErrorMessage('The password is invalid or you have already signed up with google.')
+                } else if (error.code === 'auth/email-already-in-use') {
+                    setErrorMessage('There is an account using the email already.')
                 }
             }
         } else {
@@ -39,9 +41,14 @@ const SignInScreen = () => {
     }
 
     const prueba = async () => {
-        await firestore().collection('test').add({
-            name: 'test',
-        })
+        try {
+            await googleSignin();
+        } catch (error) {
+            console.log(error, error.code);
+            if(error.code === '12501'){
+                console.log('The user has cancelled signing in with Google.')
+            }
+        }
     }
 
     return (
